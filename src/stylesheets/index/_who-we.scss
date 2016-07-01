@@ -1,0 +1,54 @@
+.who-we {
+  background-color: #ffffff;
+  padding-top: 50px;
+  @media screen and (min-width: $media-tablet){
+    @include clearfix();
+  }
+  &__inner {
+    @extend %container;
+    font-family: $fontRobotoCondensedLigth;
+    font-size: 18px;
+    color: $commonGreyColor;
+    .header {
+      margin: 0;
+      border-bottom: 3px solid #a0a0a0;
+      h3 {
+        margin: 10px 0 0;
+        @extend %big-header;
+        font-size: toAdaptiveSize(1600, 42, $maketWidth);
+      }
+    }
+    .text-content {
+      @extend %common-text;
+      text-align: justify;
+      display: inline-block;
+      width: 43%;
+      @media screen and (min-width: $media-tablet){
+        float: left;
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+        width: 100%;
+      }
+    }
+  }
+  &__img {
+    display: inline-block;
+    width: 56%;
+    vertical-align: top;
+    margin-top: 110px;
+    img {
+      width: 100%;
+      margin-left: toPercents(45, 739.656);
+    }
+    @media screen and (min-width: $media-tablet){
+      float: right;
+    }
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+      margin-top: 40px;
+      width: 100%;
+      img {
+        margin-left: 0;
+      }
+    }
+  }
+}

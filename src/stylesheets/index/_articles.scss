@@ -1,0 +1,118 @@
+.interesting-articles {
+  background-color: #0347a8;
+  font-family: $fontRobotoCondensedRegular;
+  color: #ffffff;
+  &__inner {
+    @extend %container;
+    margin: 0 auto;
+    padding-top: 30px;
+    position: relative;
+  }
+  &__header {
+    width: 100%;
+    border-bottom: 3px solid #5dd1f8;
+    font-size: 30px;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileM) {
+      font-size: 28px;
+    }
+    h3 {
+      margin: 0;
+    }
+  }
+  &__articles-list {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  article {
+    display: inline-block;
+  }
+  &__article-item {
+    width: 20%;
+    display: inline-block;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    h4 {
+      font-size: 22px;
+    }
+    p:first-of-type {
+      font-size: 17px;
+      letter-spacing: -.2px;
+      text-align: justify;
+    }
+    p:last-of-type {
+      text-align: left;
+    }
+  }
+  &__prev-button {
+    @extend %common-swipe-control;
+    top: 50%;
+    left: -8%;
+    @media screen and (min-width: $media-mobileM) and (max-width: $media-mobileL) {
+      width: 24px;
+      border: 2px solid #d1d1d2;
+      height: 24px;
+      left: -9%;
+      i {
+        line-height: 22px;
+        font-size: 13px;
+      }
+    }
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileM) {
+      border: none;
+      top: 36%;
+      width: 24px;
+      height: 24px;
+      right: -9%;
+      i {
+        line-height: 22px;
+        font-size: 15px;
+      }
+    }
+    @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+      border: none;
+      left: -10%;
+      i{
+        font-size: 23px;
+      }
+    }
+  }
+  &__next-button {
+    @extend %common-swipe-control;
+    top: 50%;
+    right: -8%;
+    @media screen and (min-width: $media-mobileM) and (max-width: $media-mobileL) {
+      width: 24px;
+      border: 2px solid #d1d1d2;
+      height: 24px;
+      right: -9%;
+      i {
+        line-height: 22px;
+        font-size: 13px;
+      }
+    }
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileM) {
+      top: 36%;
+      width: 24px;
+      border: none;
+      height: 24px;
+      right: -9%;
+      i {
+        line-height: 22px;
+        font-size: 15px;
+      }
+    }
+    @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+      border: none;
+      right: -10%;
+      i{
+        font-size: 23px;
+      }
+    }
+  }
+}

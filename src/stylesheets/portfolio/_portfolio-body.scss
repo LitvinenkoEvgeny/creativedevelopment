@@ -1,0 +1,361 @@
+@import "compass/css3/user-interface";
+
+$margin-from-top: 30px;
+
+.our-portfolio {
+  &__items {
+    @include itemsBlock(30%, 2.5%);
+    width: 83.33333%;
+    margin-top: $margin-from-top;
+    @media screen and(min-width: $media-laptopL) and (max-width: $media-laptop) {
+      width: 73.33333%;
+    }
+    @media screen and(min-width: $media-tablet) and (max-width: $media-laptopL) {
+      width: 63.33333%;
+    }
+    @media screen and(min-width: $media-mobileS) and (max-width: $media-tablet) {
+      margin-top: 50px;
+      margin-right: 6%;
+      width: 63.33333%;
+    }
+    div {
+      margin-top: 20px;
+      em {
+        font-size: 29px;
+        float: left;
+        text-transform: uppercase;
+        font-style: normal;
+        margin-bottom: 10px;
+        @media screen and(min-width: $media-mobileS) and (max-width: $media-tablet) {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      &:nth-child(4n) {
+        margin-left: 0;
+      }
+      @media screen and(min-width: $media-tablet) and (max-width: $media-laptopL) {
+        width: 45%;
+        &:nth-child(2n) {
+          margin: 0 0 0 5%;
+        }
+      }
+      @media screen and(min-width: $media-mobileS) and (max-width: $media-tablet) {
+        width: 100%;
+        margin: 0;
+        &:nth-child(2n) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.side {
+  position: absolute;
+  top: 209px;
+  @media screen and(min-width: $media-mobileS) and (max-width: $media-tablet) {
+    top: 319px;
+  }
+}
+
+@keyframes showText {
+  0% {
+    right: 0;
+    opacity: 0;
+  }
+  98% {
+    a {
+      opacity: 0;
+    }
+  }
+  100% {
+    right: -200px;
+    opacity: 1;
+  }
+}
+
+.side-navigation {
+  &__item {
+    cursor: pointer;
+    width: 100px;
+    height: 75px;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    //@media screen and(min-width: $media-mobileS) and (max-width: $media-tablet) {
+    //  display: inline-block;
+    //}
+    &:hover {
+      background-color: #888888;
+      .side-navigation__text {
+        animation: showText .5s ease-out both;
+        z-index: -1;
+        position: absolute;
+        right: -200px;
+        top: 0;
+        background-color: #eee;
+        width: 200px;
+        display: block;
+        height: 100%;
+        display: table;
+        vertical-align: middle;
+        background-color: #888888;
+        a {
+          width: 300px;
+          font-family: $fontRobotoCondensedLigth;
+          font-size: 17px;
+          padding-left: 10%;
+          color: #ffffff;
+          vertical-align: middle;
+          display: table-cell;
+        }
+      }
+    }
+
+    .side-navigation__img {
+      background-size: contain;
+      background-position: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    &:nth-child(1) {
+      height: 66px;
+      margin-bottom: 0;
+
+      .side-navigation__img {
+        background-image: url("../images/portfolio/all.png");
+      }
+      &:hover {
+        .side-navigation__img {
+          background-image: url("../images/portfolio/all-hover.png");
+        }
+      }
+    }
+    &:nth-child(2) {
+      .side-navigation__img {
+        background-image: url("../images/portfolio/matrix.png");
+      }
+      &:hover {
+        .side-navigation__img {
+          background-image: url("../images/portfolio/matrix-hover.png");
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .side-navigation__img {
+        background-image: url("../images/portfolio/graph.png");
+      }
+      &:hover {
+        .side-navigation__img {
+          background-image: url("../images/portfolio/graph-hover.png");
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      .side-navigation__img {
+        background-image: url("../images/portfolio/lamp.png");
+      }
+      &:hover {
+        .side-navigation__img {
+          background-image: url("../images/portfolio/lamp-hover.png");
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      .side-navigation__img {
+        background-image: url("../images/portfolio/basket.png");
+      }
+      &:hover {
+        .side-navigation__img {
+          background-image: url("../images/portfolio/basket-hover.png");
+        }
+      }
+    }
+  }
+  &__img {
+    height: 100%;
+    background-image: url("../images/portfolio/sprites.png");
+    background-position: 20px 10px;
+    background-repeat: no-repeat;
+  }
+  &__text {
+    display: none;
+    animation: showText .5s ease-out both reverse;
+  }
+}
+
+@keyframes showContacts {
+  from {
+    display: none;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.contacts {
+  // centered
+  width: toPercents(924, $maketWidth);
+  left: (100 - toPercents(924, $maketWidth)) / 2;
+  top: 160px;
+  z-index: 1;
+  position: fixed;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 3px solid #686868;
+  border-radius: 15px;
+  padding: 30px;
+  font-family: $fontRobotoCondensedLigth;
+  color: #686868;
+  display: none;
+  opacity: 0;
+
+  @media screen and(min-width: $media-mobileS) and (max-width: $media-mobileL) {
+    width: 90%;
+    left: 5%;
+    padding: 0;
+    top: 30px;
+  }
+  @media screen and(min-width: $media-mobileL) and (max-width: $media-laptopL) {
+    width: 80%;
+    left: 10%;
+    top: 50px;
+  }
+  &--open {
+    animation: showContacts .3s ease both;
+    display: block;
+    z-index: 10;
+  }
+  &__wrp {
+    position: relative;
+  }
+  &__close {
+    text-align: center;
+    line-height: 46px;
+    color: #686868;
+    box-sizing: border-box;
+    width: 46px;
+    height: 46px;
+    border: 3px solid #686868;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    top: -46px;
+    right: -46px;
+    position: absolute;
+    background: url("../images/portfolio/close.png") no-repeat 50% 50% #fff;
+    cursor: pointer;
+    @media screen and(min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 20px;
+      height: 20px;
+      top: -20px;
+      right: -17px;
+      border-width: 2px;
+    }
+  }
+  &__body {
+    font-size: 0;
+    h5 {
+      font-size: 20px;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: 100;
+      @media screen and(min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        margin-bottom: 15px;
+      }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 100;
+      width: 50%;
+      display: inline-block;
+      a {
+        color: #686868;
+        font-weight: 100;
+        span {
+          margin-left: 6px;
+        }
+      }
+      i {
+        font-size: 18px;
+      }
+      &:last-of-type {
+        text-align: right;
+      }
+      @media screen and(min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        &:last-of-type {
+          text-align: center;
+        }
+      }
+    }
+  }
+  &__messengers {
+    margin-bottom: 20px;
+  }
+  &__form {
+    font-size: 16px;
+    font-weight: 100;
+    width: toPercents(607, 696.781);
+    margin: 0 auto;
+    input:not([type="submit"]), textarea {
+      @include input-placeholder {
+        color: #686868;
+        font-weight: 100;
+      }
+      box-sizing: border-box;
+      width: 100%;
+      border: 2px solid #686868;
+      margin-bottom: 15px;
+      background-color: #dcdcdc;
+      border-radius: 5px;
+      padding: 2px 5px;
+      &:focus {
+        outline: none;
+      }
+    }
+    textarea {
+      height: 100px;
+      @media screen and(min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        margin-bottom: 0;
+      }
+      @media screen and(min-width: $media-mobileL) and (max-width: $media-laptopL) {
+        margin-bottom: 0;
+      }
+    }
+    input[type="submit"] {
+      background-color: #0897d9;
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      font-family: $fontRobotoCondensedLigth;
+      font-weight: 100;
+      margin: 25px auto 80px;
+      border-radius: 5px;
+      border: none;
+      padding: 5px 15px;
+      @media screen and(min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        margin: 10px auto;
+      }
+      @media screen and(min-width: $media-mobileL) and (max-width: $media-laptopL) {
+        margin: 10px auto;
+      }
+    }
+  }
+}

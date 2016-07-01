@@ -1,0 +1,157 @@
+.web-development {
+  &__inner {
+    @extend %container;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+  &__header {
+    @extend %common-bordered-heading;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      h3 {
+        font-size: 27px;
+      }
+    }
+  }
+  &__comment {
+    @extend %common-comment;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+}
+
+.we-can-do {
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+    margin-bottom: 50px;
+  }
+  &__what {
+    font-size: 0;
+    @extend %little-container;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      margin: 0;
+      width: 100%;
+    }
+    @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+      margin: 0;
+      width: 100%;
+    }
+    @media screen and (min-width: $media-laptopL) and (max-width: $media-laptop) {
+      margin: 0;
+      width: 100%;
+    }
+    > div {
+      display: inline-block;
+      width: 27%;
+      margin: 20px 3%;
+      position: relative;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        margin: 20px 0;
+      }
+      img {
+        width: 100%;
+      }
+      &:nth-child(3n) {
+        margin-right: 0;
+        margin-left: 6%;
+      }
+      &:nth-child(3n + 1) {
+        margin-left: 0;
+        margin-right: 6%;
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        width: 100%;
+        &:nth-child(3n) {
+          margin: 20px 0;
+        }
+        &:nth-child(3n + 1) {
+          margin: 20px 0;
+        }
+      }
+      @media screen and (min-width: $media-mobileL) and (max-width: 550px) {
+        width: 100%;
+        margin: 20px 0;
+        &:nth-child(3n) {
+          margin: 20px 0;
+        }
+        &:nth-child(3n + 1) {
+          margin: 20px 0;
+        }
+      }
+      @media screen and (min-width: 551px) and (max-width: $media-laptopL) {
+        width: 45%;
+        margin: 20px 1.5%;
+        &:nth-child(3n) {
+          margin: 20px 1.5%;
+        }
+        &:nth-child(3n + 1) {
+          margin: 20px 1.5%;
+        }
+      }
+      .hover {
+        opacity: 0;
+        @extend %common-grey-text;
+        background-color: #0897d9;
+        color: #ffffff;
+        padding: 5%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transition: opacity .3s ease-in;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+        }
+        p {
+          margin: 0 auto 10%;
+          text-align: justify;
+          @media screen and (min-width: 551px) and (max-width: $media-laptopL) {
+            font-size: .8em;
+          }
+          @media screen and (min-width: $media-laptopL) and (max-width: $media-laptop) {
+            font-size: .9em;
+          }
+        }
+        .btn-red {
+          box-sizing: border-box;
+          border-radius: 7px;
+          background-color: #ff5c5c;
+          font-size: toAdaptiveSize(1600, 25, $maketWidth) * 1px;
+          font-family: $fontRobotoCondensedLigth;
+          text-align: center;
+          box-shadow: 2.5px 4.3px 5px rgba(0, 0, 0, 0.2);
+          width: 59.77777777777778%;
+          margin: 0 auto;
+          padding: 0 5%;
+          @media screen and (min-width: 551px) and (max-width: $media-laptopL) {
+            font-size: .9em;
+          }
+          @media screen and (min-width: $media-laptopL) and (max-width: $media-laptop) {
+            font-size: .9em;
+          }
+          @media screen and (min-width: $media-laptop) and (max-width: 1566px) {
+            font-size: .9em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.who-need {
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+  }
+  &__text {
+    @extend %common-grey-text;
+  }
+}

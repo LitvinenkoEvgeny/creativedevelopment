@@ -1,0 +1,113 @@
+.sprite {
+  background-image: url("../images/spritesheet.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+.sprite-backend {
+  width: 150px;
+  height: 136px;
+  background-position: -10px -10px;
+}
+
+.sprite-backend-active {
+  width: 150px;
+  height: 136px;
+  background-position: -10px -166px;
+}
+
+.sprite-backend-hover {
+  width: 150px;
+  height: 136px;
+  background-position: -10px -322px;
+}
+
+.sprite-comp {
+  width: 125px;
+  height: 149px;
+  background-position: -10px -478px;
+}
+
+.sprite-comp-active {
+  width: 125px;
+  height: 149px;
+  background-position: -10px -647px;
+}
+
+.sprite-comp-hover {
+  width: 125px;
+  height: 149px;
+  background-position: -10px -816px;
+}
+
+.sprite-images {
+  width: 149px;
+  height: 137px;
+  background-position: -10px -985px;
+}
+
+.sprite-images-active {
+  width: 149px;
+  height: 137px;
+  background-position: -10px -1142px;
+}
+
+.sprite-images-hover {
+  width: 149px;
+  height: 137px;
+  background-position: -10px -1299px;
+}
+
+.sprite-list {
+  width: 138px;
+  height: 141px;
+  background-position: -10px -1456px;
+}
+
+.sprite-list-active {
+  width: 139px;
+  height: 141px;
+  background-position: -10px -1617px;
+}
+
+.sprite-list-hover {
+  width: 139px;
+  height: 141px;
+  background-position: -10px -1778px;
+}
+
+.sprite-support {
+  width: 180px;
+  height: 131px;
+  background-position: -10px -1939px;
+}
+
+.sprite-support-active {
+  width: 180px;
+  height: 131px;
+  background-position: -10px -2090px;
+}
+
+.sprite-support-hover {
+  width: 180px;
+  height: 131px;
+  background-position: -10px -2241px;
+}
+
+.sprite-testing {
+  width: 158px;
+  height: 142px;
+  background-position: -10px -2392px;
+}
+
+.sprite-testing-active {
+  width: 158px;
+  height: 142px;
+  background-position: -10px -2554px;
+}
+
+.sprite-testing-hover {
+  width: 158px;
+  height: 142px;
+  background-position: -10px -2716px;
+}

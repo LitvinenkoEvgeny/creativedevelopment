@@ -1,0 +1,497 @@
+.tasks {
+  &__inner {
+    @include clearfix();
+    @extend %container;
+    margin-top: 60px;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-laptopL) {
+      margin-top: 25px;
+    }
+
+    .left__img {
+      width: 51.23958%;
+      display: inline-block;
+      img {
+        width: 80%;
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-laptopL) {
+        margin-top: 25px;
+        width: 100%;
+      }
+    }
+
+    .right__text {
+      width: toPercents(889, $maketWidth);
+      float: right;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-laptopL) {
+        margin-top: 25px;
+        width: 100%;
+      }
+      h3 {
+        font-family: $fontRobotoCondensedRegular;
+        font-size: 29px;
+        margin-top: 0;
+        color: $commonBlueColor;
+        @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+          font-size: 25px;
+        }
+      }
+      p {
+        @extend %common-grey-text;
+        text-align: justify;
+      }
+    }
+  }
+}
+
+.our-team {
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+  }
+  &__items {
+    margin-top: 50px;
+    text-align: center;
+  }
+  &__item {
+    display: inline-block;
+    width: toPercents(325, $maketWidth);
+    margin: 0 toPercents(55, $maketWidth);
+    text-align: center;
+    @media screen and (min-width: $media-mobileL) and (max-width: $media-laptop) {
+      vertical-align: top;
+      width: 26.92708%;
+    }
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      vertical-align: top;
+      width: 33.3333%;
+      &:last-child {
+        width: 100%;
+        img {
+          width: 33%;
+        }
+      }
+    }
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+      &:nth-of-type(2) {
+        p {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      @extend %common-grey-text;
+      font-size: 20px;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+  }
+}
+
+.dev-process {
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+  }
+  &__explain {
+    margin: 50px 0;
+    font-size: 0;
+    .expl {
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      width: toPercents(153, 1320.830);
+
+      @media screen and (min-width: $media-laptopL) and (max-width: $media-laptop) {
+        width: toPercents(127.859, 853.328);
+      }
+      @media screen and (min-width: $media-tablet) and (max-width: $media-laptopL) {
+        width: 13.28363%;
+      }
+      i {
+        width: 100%;
+        background-position: 0;
+        background-size: contain;
+      }
+      @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+        margin-left: 0;
+        width: 50%;
+        &:nth-child(2n) {
+          margin-left: 5%;
+        }
+        i {
+          width: 50%;
+          background-position: center;
+        }
+      }
+      &:not(:last-child) {
+        &::after {
+          position: absolute;
+          content: "";
+          background-image: url("../images/about/about-sprites.png");
+          background-position: 60px 0;
+          display: inline-block;
+          width: 59px;
+          height: 9px;
+          top: 35%;
+          right: -37%;
+          @media screen and (min-width: $media-mobileS) and (max-width: $media-laptop) {
+            display: none;
+          }
+        }
+        &:nth-child(1) {
+        }
+        &:nth-child(2)::after {
+          right: -38%;
+        }
+        &:nth-child(3)::after {
+          right: -45%;
+        }
+        &:nth-child(4)::after {
+          right: -45%;
+        }
+        &:nth-child(5)::after {
+          right: -42%;
+        }
+      }
+      &:not(:first-child) {
+        margin-left: 6%;
+        @media screen and (min-width: $media-laptopL) and (max-width: $media-laptop) {
+          margin-left: 2%;
+        }
+        @media screen and (min-width: $media-tablet) and (max-width: $media-laptopL) {
+          margin-left: 4%;
+        }
+        @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+          margin-left: 0;
+        }
+        @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+          &:nth-child(1n) {
+            margin-left: 0;
+          }
+          &:nth-child(2n) {
+            margin-left: 20%;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+        margin-bottom: 25px;
+        margin-left: 0;
+        width: 40%;
+        p {
+          font-size: 13px;
+        }
+        i {
+          background-position: center !important;
+        }
+      }
+
+      &:not(.expl--active):hover {
+        p {
+          color: #4e4e4e;
+        }
+      }
+      &--active {
+        p {
+          color: #0896da;
+        }
+      }
+      &:nth-child(4) {
+        @media screen and (min-width: $media-tablet) and (max-width: $media-laptopL) {
+          p {
+            margin-left: 0;
+          }
+        }
+      }
+      &:nth-child(5) {
+        vertical-align: top;
+      }
+      &:nth-child(6) {
+        vertical-align: bottom;
+        @media screen and (min-width: $media-tablet) and (max-width: $media-laptopL) {
+          p {
+            margin-left: 3px;
+          }
+        }
+      }
+      //==================================================================================
+      // list
+      //==================================================================================
+
+      &:nth-child(1).expl--active {
+        i {
+          background-image: url("../images/about/sprites/list-hover.png");
+          background-position: 0;
+        }
+      }
+      &:nth-child(1):not(.expl--active) {
+        i {
+          background-image: url("../images/about/sprites/list.png");
+          background-position: 0;
+        }
+        &:hover {
+          i {
+            background-image: url("../images/about/sprites/list-active.png");
+            background-position: 0;
+          }
+        }
+      }
+
+      //==================================================================================
+      // End of list
+      //==================================================================================
+
+      //==================================================================================
+      // comp
+      //==================================================================================
+
+      &:nth-child(2).expl--active {
+        i {
+          background-image: url("../images/about/sprites/comp-hover.png");
+          background-position: center;
+        }
+      }
+      &:nth-child(2):not(.expl--active) {
+        i {
+          background-image: url("../images/about/sprites/comp.png");
+          background-position: center;
+        }
+        &:hover {
+          i {
+            background-image: url("../images/about/sprites/comp-active.png");
+            background-position: center;
+
+          }
+        }
+      }
+
+      //==================================================================================
+      // End of comp
+      //==================================================================================
+
+      //==================================================================================
+      // images
+      //==================================================================================
+
+      &:nth-child(3).expl--active {
+        i {
+          background-image: url("../images/about/sprites/images-hover.png");
+          background-position: 0;
+        }
+      }
+      &:nth-child(3):not(.expl--active) {
+        i {
+          background-image: url("../images/about/sprites/images.png");
+          background-position: 0;
+        }
+        &:hover {
+          i {
+            background-image: url("../images/about/sprites/images-active.png");
+            background-position: 0;
+          }
+        }
+      }
+
+      //==================================================================================
+      // End of images
+      //==================================================================================
+
+      //==================================================================================
+      // backend
+      //==================================================================================
+
+      &:nth-child(4).expl--active {
+        i {
+          background-image: url("../images/about/sprites/backend-hover.png");
+          background-position: 0;
+        }
+      }
+      &:nth-child(4):not(.expl--active) {
+        i {
+          background-image: url("../images/about/sprites/backend.png");
+          background-position: 0;
+        }
+        &:hover {
+          i {
+            background-image: url("../images/about/sprites/backend-active.png");
+            background-position: 0;
+          }
+        }
+      }
+
+      //==================================================================================
+      // End of backend
+      //==================================================================================
+
+      //==================================================================================
+      // testing
+      //==================================================================================
+
+      &:nth-child(5).expl--active {
+        i {
+          background-image: url("../images/about/sprites/testing-hover.png");
+          background-position: 0;
+        }
+      }
+      &:nth-child(5):not(.expl--active) {
+        i {
+          background-image: url("../images/about/sprites/testing.png");
+          background-position: 0;
+        }
+        &:hover {
+          i {
+            background-image: url("../images/about/sprites/testing-active.png");
+            background-position: 0;
+          }
+        }
+      }
+
+      //==================================================================================
+      // End of testing
+      //==================================================================================
+
+      //==================================================================================
+      // support
+      //==================================================================================
+
+      &:nth-child(6).expl--active {
+        i {
+          background-image: url("../images/about/sprites/support-hover.png");
+          background-position: 0;
+        }
+      }
+      &:nth-child(6):not(.expl--active) {
+        i {
+          background-image: url("../images/about/sprites/support.png");
+          background-position: 0;
+        }
+        &:hover {
+          i {
+            background-image: url("../images/about/sprites/support-active.png");
+            background-position: 0;
+          }
+        }
+        p{
+          margin-left: 25px;
+        }
+      }
+
+      //==================================================================================
+      // End of support
+      //==================================================================================
+
+      p {
+        @extend %common-grey-text;
+        display: block;
+        text-transform: uppercase;
+        @media screen and (min-width: $media-laptopL) and (max-width: $media-laptop) {
+          font-size: 13px;
+          text-align: center;
+        }
+        @media screen and (min-width: $media-tablet) and (max-width: $media-laptopL) {
+          font-size: 11px;
+          margin-left: -8px;
+        }
+        @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+          font-size: 15px;
+        }
+        &:first-of-type {
+          margin-top: 20px;
+          @media screen and (min-width: $media-tablet) and (max-width: $media-laptopL) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    i {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+    }
+  }
+
+  @keyframes showRight {
+    from {
+      opacity: 0;
+      left: 100%;
+    }
+    to {
+      opacity: 1;
+      left: 0;
+    }
+  }
+  @keyframes showLeft {
+    from {
+      opacity: 0;
+      margin-left: -100%;
+    }
+    to {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+  &__text {
+    @include clearfix();
+    > div {
+      transition: opacity .3s ease-in-out;
+      display: none;
+      opacity: 0;
+      &.active {
+        height: 354px;
+        display: block;
+        transition: opacity .3s ease-in-out;
+        opacity: 1;
+        display: block;
+        .right {
+          animation: showRight .3s .1s ease-in-out both;
+        }
+        .left {
+          animation: showLeft .3s .1s ease-in-out both;
+        }
+      }
+    }
+    .left {
+      transition: opacity 5s ease;
+      display: inline-block;
+      width: toPercents(800, $maketWidth);
+      box-sizing: border-box;
+      img {
+        width: 100%;
+        max-height: 509px;
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-laptopL) {
+        width: 100%;
+      }
+    }
+    .right {
+      @extend %common-grey-text;
+      text-align: justify;
+      width: 100 - 3 - toPercents(800, $maketWidth);
+      margin-left: 3%;
+      float: right;
+      position: relative;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-laptopL) {
+        width: 100%;
+      }
+      p {
+        margin-top: 0;
+        @media screen and (min-width: $media-mobileS) and (max-width: $media-laptopL) {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+}

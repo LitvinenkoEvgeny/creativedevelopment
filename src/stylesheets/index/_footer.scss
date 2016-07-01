@@ -1,0 +1,61 @@
+.footer {
+  margin-top: 55px;
+  background-color: #383838;
+  font-family: $fontRobotoCondensedLigth;
+  color: #ffffff;
+  height: 183px;
+
+  &::before {
+    position: relative;
+    height: 35px;
+    top: -22px;
+    width: 100%;
+    content: "";
+    z-index: 0;
+    display: block;
+    background: url("../images/footer-border.png") repeat;
+  }
+
+  &__inner {
+    @extend %container;
+    .left {
+      width: 49%;
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 3.5%;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+        width: 100%;
+        text-align: center;
+      }
+      span {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+      em {
+        margin-left: 10px;
+      }
+    }
+    .right {
+      display: inline-block;
+      width: 49%;
+      text-align: right;
+      font-size: 20px;
+      color: #ffffff;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+        width: 100%;
+        text-align: center;
+      }
+      .skype {
+        span {
+          margin-left: 22px;
+        }
+      }
+      a {
+        color: #ffffff;
+      }
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
+}

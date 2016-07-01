@@ -1,0 +1,201 @@
+.index-top-bg {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+    display: none;
+  }
+
+  &__info {
+    text-align: center;
+    h3 {
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 62.5px;
+      font-family: $fontRobotoCondensedRegular;
+      color: #ffffff;
+    }
+  }
+  &__scroll-btn {
+    height: 64px;
+    width: 64px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    text-align: center;
+    cursor: pointer;
+    //background-image: url("../images/index/chevron-down.png");
+    //background-repeat: no-repeat;
+    //background-position: center;
+
+    i {
+      line-height: 64px;
+      color: #ffffff;
+    }
+  }
+}
+
+.animation {
+  position: relative;
+  .animation-flw {
+    height: 568px;
+    embed {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.what-we-do {
+  ul {
+    width: toPercents(1400, $maketWidth);
+    margin: 50px auto 0;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 75%;
+      margin: 50px auto 0;
+      text-align: center;
+    }
+    li {
+      display: inline-block;
+      width: 25%;
+      margin: 0 3.5%;
+      text-align: center;
+      font-family: $fontRobotoCondensedLigth;
+      font-size: toAdaptiveSize(1600, 21, $maketWidth) * 1px;
+      @media screen and (min-width: $media-tablet) and (max-width: $media-laptop) {
+        vertical-align: top;
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        margin: 15px auto 15px;
+        width: 50%;
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+        font-size: 14px;
+      }
+      &:hover {
+        span {
+          color: #5dd1f8;
+        }
+      }
+      div {
+        width: 100%;
+        display: inline-block;
+      }
+      &:nth-child(1) {
+        div {
+          content: url("../images/index/gray-what-we-do-1.jpg");
+        }
+        &:hover {
+          div {
+            content: url("../images/index/what-we-do-1.jpg");
+          }
+        }
+      }
+      &:nth-child(2) {
+        div {
+          content: url("../images/index/gray-what-we-do-2.jpg");
+        }
+        &:hover {
+          div {
+            content: url("../images/index/what-we-do-2.jpg");
+          }
+        }
+      }
+      &:nth-child(3) {
+        div {
+          content: url("../images/index/gray-what-we-do-3.jpg");
+        }
+        &:hover {
+          div {
+            content: url("../images/index/what-we-do-3.jpg");
+          }
+        }
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        &:not(:nth-child(3)){
+          width: 45%;
+          margin: 10px 2.5%;
+        }
+      }
+    }
+    span {
+      color: #686868;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 20px;
+    }
+  }
+}
+
+.our-works {
+  @extend %container;
+  border-bottom: 3px solid #a0a0a0;
+  margin: 0 auto;
+  h3 {
+    @extend %big-header;
+  }
+  &__list {
+    @extend %container;
+    margin: 40px auto 50px;
+    position: relative;
+    .swiper-slide {
+      display: inline-block;
+      width: 19.5%;
+      text-align: justify;
+      &:not(:last-child) {
+        margin-right: 2%;
+      }
+      img {
+        width: 100%;
+      }
+      p {
+        @extend %common-text;
+        margin-top: 15px;
+      }
+    }
+    .swiper-next, .swiper-prev {
+      @extend %common-swipe-control;
+      @media screen and (max-width: $media-tablet) and (max-width: $media-laptopL) {
+        width: 30px;
+        height: 30px;
+        i {
+          line-height: 27px;
+        }
+      }
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        width: 20px;
+        border: 2px solid #d1d1d2;
+        height: 20px;
+        border: none;
+        i {
+          line-height: 18px;
+          font-size: 23px;
+        }
+      }
+    }
+    .swiper-next {
+      top: 30%;
+      right: -8%;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        right: -10%;
+      }
+    }
+    .swiper-prev {
+      top: 30%;
+      left: -8%;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        left: -10%;
+      }
+    }
+    .swiper-pagination {
+      z-index: 1;
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+}

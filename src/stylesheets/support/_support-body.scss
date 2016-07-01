@@ -1,0 +1,127 @@
+.support {
+  &__inner {
+    @extend %container;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+  &__header {
+    @extend %common-bordered-heading;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      h3 {
+        font-size: 27px;
+      }
+    }
+  }
+  &__comment {
+    @extend %common-comment;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+}
+
+.support-we-do-for-you {
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+  }
+  &__items {
+    @include itemsBlock(40%, 5%);
+    div .img {
+      width: 68.1%;
+      height: 359px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+      background-size: contain;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        background-position: center;
+      }
+      @media screen and (min-width: $media-mobileL) and (max-width: 1348px) {
+        background-position: center;
+      }
+    }
+    div:nth-child(1) {
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        margin-bottom: 25px;
+        h5 {
+          margin-top: 0;
+        }
+      }
+      @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .img {
+        height: 333px;
+        background-image: url("../images/support/hover-support-1.png");
+        &:hover {
+          background-image: url("../images/support/support-1.png");
+        }
+        @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+          height: 172px;
+        }
+        @media screen and (min-width: $media-mobileL) and (max-width: 1348px) {
+          height: 110px;
+        }
+        @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+          margin: 0 auto;
+        }
+      }
+    }
+    div:nth-child(2) {
+      @media screen and (min-width: $media-mobileL) and (max-width: 1348px) {
+        margin: 0;
+        float: right;
+      }
+      @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .img {
+        background-image: url("../images/support/hover-support-2.png");
+        &:hover {
+          background-image: url("../images/support/support-2.png");
+        }
+        @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+          height: 172px;
+          margin: 0;
+        }
+        @media screen and (min-width: $media-mobileL) and (max-width: 1348px) {
+          height: 110px;
+        }
+        @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+          margin: 0 auto;
+        }
+      }
+    }
+    div {
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        vertical-align: top;
+        width: 100%;
+        margin: 0;
+      }
+    }
+    p {
+      @extend %common-grey-text;
+    }
+  }
+}
+
+.support-explain {
+  margin: 50px 0;
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+  }
+  p {
+    @extend %common-grey-text;
+    margin: 10px 0;
+  }
+}

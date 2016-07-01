@@ -1,0 +1,115 @@
+.design-develop {
+  &__inner {
+    @extend %container;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+  &__header {
+    @extend %common-bordered-heading;
+
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      h3 {
+        font-size: 27px;
+      }
+    }
+
+  }
+  &__comment {
+    @extend %common-comment;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+}
+
+.we-can-design {
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+  }
+  &__items {
+    @extend %little-container;
+    font-size: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    > div {
+      @extend %common-grey-text;
+      display: inline-block;
+      width: 25%;
+      margin: 0 4%;
+      text-align: center;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+        width: 100%;
+        margin: 0;
+      }
+      @media screen and (min-width: $media-mobileL) and (max-width: $media-tablet) {
+        width: 100%;
+        margin: 15px 0 15px;
+      }
+      @media screen and (min-width: $media-tablet) and (max-width: $media-laptop) {
+        vertical-align: top;
+        width: 33.3333%;
+        margin: 0 8%;
+        &:last-of-type {
+          width: 100%;
+          margin: 15px 0 15px;
+        }
+      }
+      .img {
+        cursor: pointer;
+        width: 100%;
+        height: 279px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      h5 {
+        text-transform: uppercase;
+      }
+      p {
+        text-align: justify;
+      }
+    }
+    div:nth-child(1) {
+      .img {
+        background-image: url("../images/design/we-can-design-1.png");
+        &:hover {
+          background-image: url("../images/design/hover-we-can-design-1.png");
+        }
+      }
+    }
+    div:nth-child(2) {
+      .img {
+        background-image: url("../images/design/we-can-design-2.png");
+        &:hover {
+          background-image: url("../images/design/hover-we-can-design-2.png");
+        }
+      }
+    }
+    div:nth-child(3) {
+      .img {
+        background-image: url("../images/design/we-can-design-3.png");
+        &:hover {
+          background-image: url("../images/design/hover-we-can-design-3.png");
+        }
+      }
+    }
+  }
+}
+
+.what-need-know {
+  margin: 50px 0;
+  &__inner {
+    @extend %container;
+  }
+  &__header {
+    @extend %common-bordered-heading;
+  }
+  p {
+    margin: 15px 0;
+    @extend %common-grey-text;
+  }
+}

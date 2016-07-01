@@ -1,0 +1,58 @@
+.products-demo {
+  &__inner {
+    @extend %container;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+  &__header {
+    @extend %common-bordered-heading;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      h3 {
+        font-size: 27px;
+      }
+    }
+  }
+  &__comment {
+    @extend %common-comment;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileL) {
+      width: 100%;
+    }
+  }
+  &__items {
+    @include itemsBlock(28%, 2.5%);
+    width: 100%;
+    div {
+      margin-top: 25px;
+      box-sizing: border-box;
+      @extend %common-grey-text;
+      @media screen and (min-width: $media-mobileS) and (max-width: 660px) {
+        width: 100%;
+        margin: 25px 0 0 0;
+        padding: 0 5%;
+      }
+      @media screen and (min-width: 660px) and (max-width: $media-laptopL) {
+        margin: 25px 0 0 0;
+        width: 50%;
+        padding: 0 5%;
+      }
+    }
+    img {
+      width: 90%;
+    }
+    em {
+      @extend %common-item-heading;
+      margin-bottom: 0;
+      @media screen and (min-width: $media-mobileS) and (max-width: 1600px) {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+    input[type="button"] {
+      @extend %common-blue-btn;
+      @media screen and (min-width: $media-mobileS) and (max-width: 1600px) {
+        width: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,197 @@
+%header-link {
+  font-size: toAdaptiveSize(1600, 25, $maketWidth) * 1px;
+  color: #686868;
+  font-family: $fontRobotoCondensedLigth;
+}
+
+%common-link {
+  font-size: $navLinkSize;
+  font-family: $fontRobotoCondensedLigth;
+  color: $navLinkColor;
+}
+
+%nav-button {
+  font-family: $fontRobotoCondensedLigth;
+  font-size: toAdaptiveSize(1600, 25, $maketWidth) * 1px;
+  color: #ffffff;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 3px 4px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+%container {
+  margin: 0 auto;
+  width: toPercents(1600, $maketWidth);
+}
+
+%little-container {
+  margin: 0 auto;
+  width: toPercents(1200, 1600);
+}
+
+%common-text {
+  color: $commonGreyColor;
+  font-size: toAdaptiveSize(1600, 21, $maketWidth) * 1px;
+  font-family: $fontRobotoCondensedLigth;
+  margin: 0;
+}
+
+%common-grey-text {
+  @extend %common-text;
+  color: #686868;
+}
+
+%common-swipe-control {
+  position: absolute;
+  height: 44px;
+  width: 44px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 3px solid #d1d1d2;
+  text-align: center;
+  cursor: pointer;
+  i {
+    line-height: 44px;
+    color: #d1d1d2;
+  }
+}
+
+%big-header {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: $fontRobotoCondensedRegular;
+  color: #008cd1;
+  font-size: toAdaptiveSize(1600, 42, $maketWidth) * 1px;
+  @media screen and (min-width: $media-mobileS) and (max-width: $media-mobileM) {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+
+%common-bordered-heading {
+  display: block;
+  width: 100%;
+  border-bottom: 3px solid #a0a0a0;
+  h3 {
+    @extend %big-header;
+  }
+
+}
+
+%common-comment {
+
+  font-size: 0;
+  @extend %little-container;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  @media screen and (min-width: $media-tablet) and (max-width: 1330px) {
+    width: 100%;
+  }
+  .left {
+    @include clearfix();
+    @extend %common-grey-text;
+    display: inline-block;
+    width: toPercents(325, 825.516);
+    text-align: center;
+    font-family: $fontRobotoCondensedLigth;
+    color: $commonGreyColor;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: $media-tablet) and (max-width: $media-laptopL) {
+      img {
+        width: 75%;
+      }
+
+    }
+    p {
+      margin-bottom: 0;
+    }
+    p:first-of-type {
+      text-transform: uppercase;
+    }
+    p:last-of-type {
+      text-transform: none;
+      margin-top: 5px;
+    }
+  }
+  .right {
+    @extend %common-grey-text;
+    display: inline-block;
+    float: right;
+    margin-left: 10%;
+    width: 100 - 10 - toPercents(325, 825.516);
+    background-color: #ceeaf7;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    position: relative;
+    @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -63px;
+      top: 80px;
+      width: 0;
+      height: 0;
+      border: 0 solid transparent;
+      border-top-width: 55px;
+      border-bottom-width: 0px;
+      border-right: 64px solid #ceeaf7;
+      @media screen and (min-width: $media-mobileS) and (max-width: $media-tablet) {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-left-width: 18px;
+        border-right-width: 22px;
+        border-top: 20px solid #ceeaf7;
+        top: 100%;
+        left: toPercents(212, 464.98);
+      }
+      //@media screen and(min-width: $media-tablet) and (max-width: $media-laptopL) {
+      //  content: "";
+      //  position: absolute;
+      //  left: -95px;
+      //  top: 35%;
+      //  width: 0;
+      //  height: 0;
+      //  border: 0 solid transparent;
+      //  border-top-width: 55px;
+      //  border-bottom-width: 0px;
+      //  border-right: 95px solid #ceeaf7;
+      //}
+    }
+  }
+}
+
+%common-blue-btn {
+  background-color: #0897d9;
+  display: block;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: $fontRobotoCondensedLigth;
+  font-weight: 100;
+  margin: 25px auto;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 15px;
+}
+
+%common-item-heading {
+  font-size: 29px;
+  float: left;
+  text-transform: uppercase;
+  font-style: normal;
+  margin-bottom: 10px;
+}

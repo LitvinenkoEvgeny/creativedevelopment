@@ -1,0 +1,35 @@
+@function toPercents($target, $context) {
+  @return $target / $context * 100 * 1%;
+}
+
+
+@function toEms($target, $base: 16) {
+  @return $target / $base * 1em;
+}
+
+@function toAdaptiveSize($container, $target, $context: $maketWidth){
+  @return $container * $target / $context;
+}
+
+@mixin itemsBlock($itemsWidth, $margin) {
+  @extend %little-container;
+  font-size: 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  div {
+    @extend %common-grey-text;
+    display: inline-block;
+    width: $itemsWidth;
+    margin: 0 $margin;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+    h5 {
+      text-transform: uppercase;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
